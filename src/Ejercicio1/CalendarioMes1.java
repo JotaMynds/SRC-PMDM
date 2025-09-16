@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class CalendarioMes1 {
     public static void NumeroMes(){
+
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el numero de un mes (1-12)(0 para salir)");
         int option = teclado.nextInt();
+
         while (option != 0){
             switch (option) {
                 case 1:

@@ -4,6 +4,6 @@ import  Ejercicio1.CalendarioMes1;
 
 public class Main1 {
     public static void main(String[] args){
-        CalendarioMes2.NumeroMes();
+        CalendarioMes1.NumeroMes();
     }
 }

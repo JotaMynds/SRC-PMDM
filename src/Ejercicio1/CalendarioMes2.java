@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class CalendarioMes2 {
 
-    public void NumeroMes(){
+    public static void NumeroMes(){
+
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el numero de un mes (1-12)(0 para salir)");
         int Nmes = teclado.nextInt();
-       String mes= ObtenerMes(Nmes);
+        String mes= ObtenerMes(Nmes);
+
         while (Nmes != 0) {
             switch (Nmes) {
                 case 1, 3, 5, 7, 8, 10, 12:
@@ -32,7 +34,9 @@ public class CalendarioMes2 {
             Nmes = teclado.nextInt();
         }
     }
-    public String ObtenerMes(int Nmes){
+
+    public static String ObtenerMes(int Nmes){
+
         String[] Mes = {"Enero","Febrero","Marzo","Abril","Mayo","Junio", "Julio",
             "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
