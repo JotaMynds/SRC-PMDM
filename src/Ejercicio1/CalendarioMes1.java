@@ -1,13 +1,10 @@
-package Ejercicios_inicio;
+package Ejercicio1;
 
 import java.util.Scanner;
 
-public class CalendarioMes {
-    public static void main(String[] args){
+public class CalendarioMes1 {
+    public static void NumeroMes(){
         Scanner teclado = new Scanner(System.in);
-        NumeroMes(teclado);
-    }
-    public static void NumeroMes(Scanner teclado){
         System.out.println("Introduce el numero de un mes (1-12)(0 para salir)");
         int option = teclado.nextInt();
         while (option != 0){
