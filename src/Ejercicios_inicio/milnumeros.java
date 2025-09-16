@@ -1,3 +1,5 @@
+package Ejercicios_inicio;
+
 import java.util.Scanner;
 
 public class milnumeros {
