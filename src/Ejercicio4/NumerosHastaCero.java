@@ -10,6 +10,7 @@ public class NumerosHastaCero {
         int NM1 = 0;
         int NM2 = 0;
         int Nm = 0;
+        boolean primero = true;
 
         //Comprobar que es un numero y no un string y si no es negativo
         while (!sc.hasNextBigInteger()) {
@@ -18,6 +19,7 @@ public class NumerosHastaCero {
             System.out.println("Introduce un número: ");
             N = sc.nextInt();
         }
+
         N = sc.nextInt();
 
         while (N != 0) {
@@ -28,20 +30,31 @@ public class NumerosHastaCero {
                 System.out.println("Introduce un número positivo: ");
                 N = sc.nextInt();
             }
-
-            //Guardar variables para los números máximos y el número mínimo
-
-            esPar(N);
-            if (N > NM1) {
+            if (primero) { // Hacer que el primer número sea el que
+                // iguala las asignaciones para que el mínimo pueda compararse
                 NM1 = N;
-            } else if (N > NM2 && N< NM1) {
-                NM2 = N;
-            } else if (N < Nm) {
                 Nm = N;
+                primero = false;
             }
+                //Guardar variables para los números máximos y el número mínimo
 
-            System.out.println("Introduce un número: ");
+                esPar(N); //Comprueba si es par con método externo
 
+                if (N > NM1) { // Si el número introducido es mayor que el mayor registrado lo sustituye
+                    NM2 = NM1;
+                    NM1 = N;
+                } else if (N > NM2 && N != NM1) { // Si el número introducido
+                    // es mayor que el 2 pero desigual del primero se le asigna
+                    NM2 = N;
+                }
+
+                // Si el numero introducido es menor que el menor registrado lo sustituye
+                if (N < Nm) {
+                    Nm = N;
+                }
+
+
+            System.out.println("Introduce otro número: ");
 
             while (!sc.hasNextBigInteger()) {
                 System.err.println("Formato incorrecto");
