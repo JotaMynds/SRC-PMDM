@@ -17,19 +17,20 @@ public class ProgramaDiasDelMes {
             }
 
 
-        mes = sc.nextInt();
+            mes = sc.nextInt();
 
-        if (mes == 0) {
-            System.out.println("Fin del programa");
-        }else {
-            int dias = CalendarioMes3.diaDelMes(mes);
-            if(dias == -1){
-                System.err.println("Mes invalido. Introduce un número del mes válido: ");
-            }else{
-                System.out.println("El mes " + mes + " tiene " + dias + " dias");
+            if (mes == 0) {
+                System.out.println("Fin del programa");
+            } else {
+                int dias = CalendarioMes3.diaDelMes(mes);
+                if (dias == -1) {
+                    System.err.println("Mes invalido. Introduce un número del mes válido: ");
+                } else {
+                    System.out.println("El mes " + mes + " tiene " + dias + " dias");
+                }
             }
-        }
-        }while(mes != 0);{
+        } while (mes != 0);
+        {
             sc.close();
         }
     }
