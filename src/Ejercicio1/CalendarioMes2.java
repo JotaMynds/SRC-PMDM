@@ -14,7 +14,7 @@ public class CalendarioMes2 {
             if(Nmes>=1 && Nmes<=12){
                 mes = ObtenerMes(Nmes);
             }
-            
+
             switch (Nmes) {
                 case 1, 3, 5, 7, 8, 10, 12:
                     System.out.println(mes + " tiene 31 días");
@@ -37,6 +37,11 @@ public class CalendarioMes2 {
         }
     }
 
+    /**
+     * Devuelve el String del mes del año para mostrarlo posteriormente con sus días
+     * @param Nmes número del mes (1-12)
+     * @return meses del año
+     */
     public static String ObtenerMes(int Nmes){
 
         String[] Mes = {
