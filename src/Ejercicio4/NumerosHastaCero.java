@@ -7,7 +7,6 @@ public class NumerosHastaCero {
     public static void NumerosHasta() {
         Scanner sc = new Scanner(System.in);
         int N;
-
         int mayor1 = 0;
         int mayor2 = 0;
         int menor = 0;
