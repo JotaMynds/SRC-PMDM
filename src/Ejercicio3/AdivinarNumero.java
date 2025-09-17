@@ -25,6 +25,10 @@ public class AdivinarNumero {
             System.out.println("Introduce un numero:");
             N1 = teclado.nextInt();
         }
+        if (N1!=numero){
+            System.out.println("No ha sido capaz de adivinarlo");
+            teclado.close();
+        }
     }
 
 
